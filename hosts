@@ -1,0 +1,2 @@
+[DUT]
+mlx-2410-52 ansible_host=10.50.21.132 ansible_user=cumulus
