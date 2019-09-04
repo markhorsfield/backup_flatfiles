@@ -9,12 +9,13 @@
   tasks:
     - name: Fetch ports.conf
       fetch: dest=save/{{ inventory_hostname }}/ports.conf src=/etc/cumulus/ports.conf flat=yes
-
+    - name: Fetch switchd.conf
+      fetch: dest=save/{{ inventory_hostname }}/switchd.conf src=/etc/cumulus/switchd.conf flat=yes
+    - name: Fetch traffic.conf
+      fetch: dest=save/{{ inventory_hostname }}/traffic.conf src=/etc/cumulus/datapath/traffic.conf flat=yes
     - name: Fetch interfaces Configuration
       fetch: dest=save/{{ inventory_hostname }}/interfaces src=/etc/network/interfaces flat=yes
-
     - name: Fetch FRR daemons file
       fetch: dest=save/{{ inventory_hostname }}/daemons src=/etc/frr/daemons flat=yes
-
     - name: Fetch frr.conf
       fetch: dest=save/{{ inventory_hostname }}/frr.conf src=/etc/frr/frr.conf flat=yes
